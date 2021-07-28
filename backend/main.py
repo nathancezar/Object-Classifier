@@ -1,10 +1,7 @@
 import tornado.ioloop
 import tornado.web
-import json
-from images_handler import ImagesHandler
 from folders_handler import FoldersHandler
 from login_handler import LoginHandler
-from training_handler import TrainingHandler
 
 def make_app():
     return tornado.web.Application([
