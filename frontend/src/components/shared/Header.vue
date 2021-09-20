@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-navbar class="header navbar navbar-dark bg-dark text-white" toggleable="lg">
-            <b-navbar-brand><b>YOCO</b></b-navbar-brand>
+            <b-navbar-brand><b>Object Classifier</b></b-navbar-brand>
             <b-navbar-nav class="ml-auto">
                 <span><b>Usuário:</b> {{this.$session.get('user_name')}} </span>
             </b-navbar-nav>
@@ -199,7 +199,7 @@ export default {
         return {
             userPrivileged: false,
             training: {
-                dataset: '/mnt/yoco_datasets',
+                dataset: '/mnt/oc_datasets',
                 nclasses: 1,
                 epochs: 10,
                 device: 'cpu',

@@ -54,7 +54,7 @@ class FoldersHandler(BaseHandler):
 
     def insertDatabase(self):
         try:
-            insert_database.insertDatabase({"path": "/home/nathancezar/Documentos/yoco/items"})
+            insert_database.insertDatabase({"path": "/home/nathancezar/Documentos/Objects-Classificator/items"})
             self.set_status(200)
         except Exception as ex:
             traceback.print_exc()
@@ -67,9 +67,9 @@ class FoldersHandler(BaseHandler):
             foldersController = FoldersController()
             folder = foldersController.getById(request["folder_id"])
             request["folder"] = folder
-            request["images_out"] = "/mnt/yoco_datasets/images"
-            request["labels_out"] = "/mnt/yoco_datasets/labels"
-            request["tar_out"] = "/mnt/yoco_datasets"
+            request["images_out"] = "/mnt/oc_datasets/images"
+            request["labels_out"] = "/mnt/oc_datasets/labels"
+            request["tar_out"] = "/mnt/oc_datasets"
 
             get_dataset_labels.exportFolder(request)
             foldersController.updateExported({
@@ -89,9 +89,9 @@ class FoldersHandler(BaseHandler):
             foldersController = FoldersController()
             folders = foldersController.getAllUnexported()
             request["folders"] = folders
-            request["images_out"] = "/mnt/yoco_datasets/images"
-            request["labels_out"] = "/mnt/yoco_datasets/labels"
-            request["tar_out"] = "/mnt/yoco_datasets"
+            request["images_out"] = "/mnt/oc_datasets/images"
+            request["labels_out"] = "/mnt/oc_datasets/labels"
+            request["tar_out"] = "/mnt/oc_datasets"
 
             get_dataset_labels.exportAll(request)
             for folder in folders:
