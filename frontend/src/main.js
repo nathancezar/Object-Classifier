@@ -13,7 +13,7 @@ Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
 
-const backend = process.env.NODE_ENV === 'development' ? 'http://localhost:8888' : 'http://150.162.177.83:8888';
+const backend = process.env.NODE_ENV === 'development' ? 'http://localhost:8888' : 'http://192.168.0.70:8888';
 
 Vue.mixin({
     data() {
