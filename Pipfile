@@ -8,6 +8,7 @@ numpy = "*"
 peewee = "*"
 tornado = "*"
 python-dotenv = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
